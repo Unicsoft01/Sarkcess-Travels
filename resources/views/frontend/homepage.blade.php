@@ -38,7 +38,7 @@
                         <h1 class="animated fadeInLeft">Online MBA</h1>
                         <p class="animated fadeInLeft">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry.</p>
-                        <a href="about.html" class="btn animated fadeInLeft">Know More <span
+                        <a href="about.html" class="btn btn-success animated fadeInLeft">Know More <span
                                 class="icon-more-icon"></span></a>
                     </div>
                 </div>
@@ -49,10 +49,10 @@
     <!-- ==============================================
     ** About **
     =================================================== -->
-    <section class="about">
+    {{-- <section class="about">
         <div class="container">
             <ul class="row our-links">
-                <li class="col-sm-3 apply-onlines bg-success clearfix equal-hight">
+                <li class="col-sm-3 apply-online clearfix equal-hight">
                     <div class="icon">
                         <img src="{{ url('/') }}/frontend/images/apply-online-ico.png" class="img-responsive"
                             alt="">
@@ -60,8 +60,10 @@
                     <div class="detail">
                         <h3>Apply Online</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing...</p>
-                        <a href="apply-online.html" class="more"><i class="fa fa-angle-right"
-                                aria-hidden="true"></i></a>
+                        <a href="apply-online.html" class="more">
+                            Explore Countries <i class="fa fa-angle-right"
+                                aria-hidden="true"></i>
+                            </a>
                     </div>
                 </li>
                 <li class="col-sm-3 prospects clearfix equal-hight">
@@ -74,7 +76,7 @@
                         <a href="#" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
-                <li class="col-sm-3 certificationddd bg-secondary clearfix equal-hight">
+                <li class="col-sm-3 certification clearfix equal-hight">
                     <div class="icon"><img src="{{ url('/') }}/frontend/images/certification-ico.png"
                             class="img-responsive" alt=""></div>
                     <div class="detail">
@@ -83,7 +85,7 @@
                         <a href="#" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
-                <li class="col-sm-3 apply-onlines bg-success clearfix equal-hight">
+                <li class="col-sm-3 apply-online bg-sucess clearfix equal-hight">
                     <div class="icon">
                         <img src="{{ url('/') }}/frontend/images/apply-online-ico.png" class="img-responsive"
                             alt="">
@@ -120,12 +122,45 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
+    <!-- ==============================================
+    ** How to Apply **
+    =================================================== -->
+    <section class="how-apply padding-lg">
+        <div class="container">
+            <h2><span>There are many ways to learn</span>How to Apply</h2>
+            <ul class="row">
+                <li class="col-sm-4">
+                    <div class="icon-block"> <span class="num">1</span> <img
+                            src="{{ url('/') }}/frontend/images/registration-ico.png" alt=""></div>
+                    <h3>REGISTRATION</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's</p>
+                </li>
+                <li class="col-sm-4">
+                    <div class="icon-block"> <span class="num">2</span> <img
+                            src="{{ url('/') }}/frontend/images/doc-ico.png" alt=""></div>
+                    <h3>DOCUMENTATION</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's</p>
+                </li>
+                <li class="col-sm-4 active">
+                    <div class="icon-block"> <span class="num">3</span> <img
+                            src="{{ url('/') }}/frontend/images/get-start-ico.png" alt=""></div>
+                    <h3>Get started now</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's</p>
+                </li>
+            </ul>
+            <div class="button-wrapper"> <a href="apply-online.html" class="btn">apply now <span
+                        class="icon-more-icon"></span></a> </div>
+        </div>
+    </section>
     <!-- ==============================================
     ** Our Cources **
     =================================================== -->
-    <section class="our-cources padding-lg">
+    {{-- <section class="our-cources padding-lg">
         <div class="container">
             <h2> <span>Unique Features of our programs</span> What do you want to study?</h2>
             <ul class="course-list owl-carousel">
@@ -191,12 +226,12 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> --}}
 
     <!-- ==============================================
     ** Our Importance **
     =================================================== -->
-    <section class="our-impotance padding-lg">
+    {{-- <section class="our-impotance padding-lg">
         <div class="container">
             <ul class="row">
                 <li class="col-sm-4 equal-hight">
@@ -251,7 +286,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> --}}
 
     <!-- ==============================================
     ** How Study **
@@ -260,38 +295,92 @@
         <div class="container">
             <h2> <span>There are many ways to learn</span> How do you want to study?</h2>
             <ul class="row">
-                <li class="col-sm-4">
+                <li class="col-sm-4" style="margin-bottom: 8px;">
                     <div class="overly">
                         <div class="cnt-block">
-                            <h3>Self-paced distance
-                                learning</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing...</p>
+                            <h3>
+                                Self-paced distance
+                                learning
+                            </h3>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
                         </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img1.jpg" class="img-responsive"
                             alt=""></figure>
                 </li>
-                <li class="col-sm-4">
+                <li class="col-sm-4" style="margin-bottom: 8px;">
                     <div class="overly">
                         <div class="cnt-block">
                             <h3>Study on
                                 campus</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing...</p>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
                         </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img2.jpg" class="img-responsive"
                             alt=""></figure>
                 </li>
-                <li class="col-sm-4">
+                <li class="col-sm-4" style="margin-bottom: 8px;">
                     <div class="overly">
                         <div class="cnt-block">
                             <h3> Our Learning
                                 Partners </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing...</p>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
                         </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                    </div>
+                    <figure><img src="{{ url('/') }}/frontend/images/how-study-img3.jpg" class="img-responsive"
+                            alt=""></figure>
+                </li>
+                <li class="col-sm-4" style="margin-bottom: 8px;">
+                    <div class="overly">
+                        <div class="cnt-block">
+                            <h3>
+                                Self-paced distance
+                                learning
+                            </h3>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
+                        </div>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+
+                    </div>
+                    <figure><img src="{{ url('/') }}/frontend/images/how-study-img1.jpg" class="img-responsive"
+                            alt=""></figure>
+                </li>
+                <li class="col-sm-4" style="margin-bottom: 8px;">
+                    <div class="overly">
+                        <div class="cnt-block">
+                            <h3>Study on
+                                campus</h3>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
+                        </div>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                    </div>
+                    <figure><img src="{{ url('/') }}/frontend/images/how-study-img2.jpg" class="img-responsive"
+                            alt=""></figure>
+                </li>
+                <li class="col-sm-4" style="margin-bottom: 8px;">
+                    <div class="overly">
+                        <div class="cnt-block">
+                            <h3> Our Learning
+                                Partners </h3>
+                            <a href="#" class="btn btn-success" style="margin-left: 22%; border-radius: 4pc;">
+                                Study in the UK
+                            </a>
+                        </div>
+                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img3.jpg" class="img-responsive"
                             alt=""></figure>
@@ -299,6 +388,135 @@
             </ul>
         </div>
     </section>
+
+    <div class="ag-container">
+        <div class="ag-format-container">
+            <div class="ag-courses_box">
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                04.11.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            UX/UI Web-Design&#160;+ Mobile Design
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                04.11.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Annual package "Product+UX/UI+Graph designer&#160;2022"
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                04.11.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Graphic Design
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                04.11.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Motion Design
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                30.11.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Front-end development&#160;+ jQuery&#160;+ CMS
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg">
+                        </div>
+                        <div class="ag-courses-item_title">
+                            Digital Marketing
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+
+                        <div class="ag-courses-item_title">
+                            Interior Design
+                        </div>
+
+                        <div class="ag-courses-item_date-box">
+                            Start:
+                            <span class="ag-courses-item_date">
+                                31.10.2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- ==============================================
     ** Why Choose **
@@ -413,113 +631,7 @@
     <!-- ==============================================
     ** Campus Tour **
     =================================================== -->
-    <section class="campus-tour padding-lg">
-        <div class="container">
-            <h2><span>Our campus have a lot to offer for our students</span>TAKE A CAMPUS TOUR</h2>
-        </div>
-        <ul class="gallery clearfix">
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg1.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour1.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg2.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour2.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg3.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour3.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg4.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour4.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg5.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour5.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg6.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour6.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg7.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour7.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg8.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour8.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg9.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour9.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-            <li>
-                <div class="overlay">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum</p>
-                    <a class="galleryItem" href="images/tour-lg10.jpg"><span class="icon-enlarge-icon"></span></a>
-                    <a href="gallery.html" class="more"><span class="icon-gallery-more-arrow"></span></a>
-                </div>
-                <figure><img src="{{ url('/') }}/frontend/images/tour10.jpg" class="img-responsive"
-                        alt=""></figure>
-            </li>
-        </ul>
-    </section>
+
 
     <!-- ==============================================
     ** Brands **

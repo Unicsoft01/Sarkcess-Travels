@@ -68,9 +68,9 @@ this is the file you need to edit to change the look of the Template.
 /* 01. General Style */
 /* ================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Work Sans','Roboto', sans-serif;
 	font-size: 14px;
 	color: #93a0a7;
 	line-height: 26px;
@@ -729,11 +729,11 @@ textarea:focus::placeholder{
 	position: relative;
 }
 .about ul.our-links li.apply-online {
-	background: #ff9600;
+	background: #0c9e11;
 }
 .about ul.our-links li.prospects .detail a.more {
-	border: 2px #ff9600 solid;
-	color: #ff9600;
+	border: 2px #0c9e11 solid;
+	color: #0c9e11;
 }
 .about ul.our-links li.prospects {
 	background: #2c97ea;
@@ -743,11 +743,11 @@ textarea:focus::placeholder{
 	color: #2c97ea;
 }
 .about ul.our-links li.certification {
-	background: #f0bc01;
+	background: #292b29fd;
 }
 .about ul.our-links li.certification .detail a.more {
-	border: 2px #f0bc01 solid;
-	color: #f0bc01;
+	border: 2px #292b29fd solid;
+	color: #292b29fd;
 }
 .about ul.our-links li {
 	display: block !important;
@@ -786,8 +786,8 @@ textarea:focus::placeholder{
 }
 .about ul.our-links li .detail a.more {
 	display: inline-block;
-	width: 38px;
-	height: 38px;
+	/* width: 90px; */
+	height: 45px;
 	line-height: 34px;
 	position: absolute;
 	bottom: -17px;
@@ -796,17 +796,17 @@ textarea:focus::placeholder{
 	right: 0;
 	background: #fff;
 	font-size: 20px;
-	color: #ff9600;
-	border-radius: 50%;
+	color: #0C9E11;
+	border-radius: 4pc;
 	text-align: center;
-	border: 2px #ff9600 solid;
+	border: 2px #0C9E11 solid;
 }
 .about ul.our-links li .detail a.more:hover {
-	color: #211d1e;
+	color: #0C9E11;
 }
 .about .sm-head {
 	display: block;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 14px;
 	color: #7d7c7c;
 	line-height: 18px;
@@ -913,7 +913,7 @@ textarea:focus::placeholder{
 .have-question h2 {
 	display: block;
 	padding-bottom: 44px;
-	font-family: 'texgyreadventorbold';
+	font-family: "Work Sans";
 	font-size: 36px;
 	text-transform: uppercase;
 	text-align: center;
@@ -926,7 +926,7 @@ textarea:focus::placeholder{
 .browse-teacher h2 span, 
 .how-apply h2 span {
 	display: block;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 14px;
 	opacity: 0.8;
 }
@@ -1140,7 +1140,7 @@ textarea:focus::placeholder{
 	color: #2d4256;
 }
 .how-study h2 span {
-	color: #7d8792;
+	color: #81927d;
 }
 .how-study ul {
 	display: block;
@@ -1170,7 +1170,7 @@ textarea:focus::placeholder{
 .how-study ul li .cnt-block h3 {
 	display: block;
 	padding-bottom: 12px;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans';
 	font-size: 22px;
 	color: #fff;
 	line-height: 26px;
@@ -1183,15 +1183,15 @@ textarea:focus::placeholder{
 	width: 40%;
 	height: 4px;
 	content: " ";
-	background: #ff9600;
+	/* background: #ff9600; */
 }
 .how-study ul li:nth-child(2) .cnt-block h3:before, 
 .how-study ul li:nth-child(2) a.more:hover {
-	background: #17a43b;
+	background: #17a43a00;
 }
 .how-study ul li:nth-child(3) .cnt-block h3:before, 
 .how-study ul li:nth-child(3) a.more:hover {
-	background: #1876bf;
+	background: #1877bf00;
 }
 .how-study ul li .cnt-block p {
 	display: block;
@@ -1221,6 +1221,11 @@ textarea:focus::placeholder{
 	color: #fff;
 }
 
+.how-study ul li .overly,
+.how-study ul li figure{
+    border-radius: 20px;
+    overflow: hidden;
+}
 /*-----------------------
 	why choose
 -----------------------*/
@@ -1274,7 +1279,7 @@ ul.our-strength li .icon span {
 }
 ul.our-strength li span {
 	padding-bottom: 12px;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 48px;
 }
 ul.our-strength li .couter-outer {
@@ -1282,7 +1287,7 @@ ul.our-strength li .couter-outer {
 }
 ul.our-strength li .title {
 	display: block;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 14px;
 	opacity: 0.8;
 	text-transform: uppercase;
@@ -1343,7 +1348,7 @@ ul.our-strength li .title {
 .news-events ul li .cnt-block h3 {
 	display: block;
 	padding-bottom: 36px;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 22px;
 	color: #41484d;
 	line-height: 32px;
@@ -1615,7 +1620,7 @@ ul.our-strength li .title {
 	top: 0px;
 	z-index: 1;
 	content: "";
-	background: #2e5f85;
+	background-color: #151615fd;
 	opacity: 0.8;
 }
 .testimonial .container {
@@ -1657,7 +1662,7 @@ ul.our-strength li .title {
 .testimonial ul li p {
 	display: block;
 	padding-bottom: 32px;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 23px;
 	color: #b2d3ed;
 	line-height: 38px;
@@ -1668,7 +1673,7 @@ ul.our-strength li .title {
 	color: #fff;
 }
 .testimonial ul li span {
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 18px;
 	color: #fff;
 }
@@ -1689,7 +1694,7 @@ ul.our-strength li .title {
 }
 .testimonial #bx-pager a:hover img, 
 .testimonial #bx-pager a.active img {
-	border: 5px solid #ff8500;
+	border: 5px solid #0c9e1162;
 }
 .testimonial #bx-pager a:hover:after, 
 .testimonial #bx-pager a.active:after {
@@ -1703,7 +1708,7 @@ ul.our-strength li .title {
 	content: " ";
 	border-left: 9px solid transparent;
 	border-right: 9px solid transparent;
-	border-bottom: 10px solid #ff8500;
+	border-bottom: 10px solid #0c9e11;
 }
 
 /* ================================================== */
@@ -1711,7 +1716,8 @@ ul.our-strength li .title {
 /* ================================================== */
 .footer {
 	display: block;
-	background: #234a66;
+	background: #002b01;
+	/* background: #234a66; */
 }
 .footer .row1 {
 	display: block;
@@ -1738,7 +1744,7 @@ ul.our-strength li .title {
 }
 .footer .foot-nav ul li a {
 	font-size: 12px;
-	color: #8eb6d6;
+	color: #8ed6a6;
 }
 .footer .foot-nav ul li a:hover {
 	color: #fff;
@@ -1747,11 +1753,12 @@ ul.our-strength li .title {
 	display: block;
 	padding-bottom: 30px;
 	margin-bottom: 20px;
-	border-bottom: 1px #3e6583 solid;
+	border-bottom: 1px #3e834a solid;
+	/* border-bottom: 1px #3e6583 solid; */
 }
 .footer p {
 	font-size: 12px;
-	color: #8eb6d6;
+	color: #94d68e;
 }
 .footer p span {
 	color: #fff;
@@ -1778,7 +1785,8 @@ ul.our-strength li .title {
 	padding-left: 0px;
 }
 .footer ul.terms li a {
-	color: #8eb6d6;
+	/* color: #8eb6d6; */
+	color: #9cd68e;
 }
 .footer ul.terms li a:hover {
 	color: #fff;
@@ -1786,13 +1794,15 @@ ul.our-strength li .title {
 .footer .bottom {
 	display: block;
 	padding: 40px 0;
-	background: #2e5f85;
+	/* background: #2e5f85; */
+	background: #31852e;
 }
 .footer .connect-us {
 	display: block;
 	padding: 14px 0 18px 0;
 	width: 95%;
-	border-right: 1px #537d9e solid;
+	/* border-right: 1px #537d9e solid; */
+	border-right: 1px #569e53 solid;
 }
 .footer ul.follow-us {
 	display: block;
@@ -1809,7 +1819,8 @@ ul.our-strength li .title {
 	width: 40px;
 	height: 40px;
 	display: block;
-	border: 2px #4d87b5 solid;
+	/* border: 2px #4d87b5 solid; */
+	border: 2px #4db55e solid;
 	border-radius: 50%;
 	font-size: 18px;
 	line-height: 38px;
@@ -1817,14 +1828,17 @@ ul.our-strength li .title {
 	color: #fff;
 }
 .footer ul.follow-us li a:hover {
-	background: #1c7bc3;
-	border-color: #1c7bc3;
+	/* background: #1c7bc3; */
+	background: #1cc340;
+	/* border-color: #1c7bc3; */
+	border-color: #1cc340;
 }
 .footer .subscribe {
 	display: block;
 	padding: 14px 58px 18px 0;
 	width: 95%;
-	border-right: 1px #537d9e solid;
+	/* border-right: 1px #537d9e solid; */
+	border-right: 1px #539e57 solid;
 }
 .footer .subscribe #mc_embed_signup{
 	background:#fff;
@@ -1837,29 +1851,30 @@ ul.our-strength li .title {
 	border: none;
 	background: none;
 	font-size: 12px;
-	color: #7da6c6;
+	color: #7dc683;
 }
 .footer .subscribe input[type='email']::-webkit-input-placeholder {
 	text-transform:none;
-	color:#7da6c6;
+	color:#7dc67d;
 }
 .footer .subscribe input[type='email']:-moz-placeholder { /* Firefox 18- */
 	text-transform:none;
-	color:#7da6c6;
+	color:#7dc67d;
 }
 .footer .subscribe input[type='email']::-moz-placeholder {  /* Firefox 19+ */
 	text-transform:none;
-	color:#7da6c6;
+	color:#7dc67d;
 }
 .footer .subscribe input[type='email']:-ms-input-placeholder {
 	text-transform:none;
-	color:#7da6c6;
+	color:#7dc67d;
 }
 .footer .subscribe .clear{
 	float: right;
 	text-align:center;
 	position:relative;
-	background: #2c97ea;
+	/* background: #2c97ea; */
+	background: #13c71c;
 	border-radius:0 5px 5px 0;
 	transition: all 0.3s ease 0s;
 }
@@ -2590,7 +2605,7 @@ a.download-prospects.brochure {
 }
 a.download-prospects .small {
 	display: block;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 12px;
 	color: #8f9ba1;
 	line-height: 14px;
@@ -2673,7 +2688,7 @@ a.download-cert:hover {
 .select-course .select2-container--default .select2-selection--single .select2-selection__rendered {
 	padding-left: 20px;
 	line-height: 48px;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -3038,7 +3053,7 @@ ul.cert-list li span {
 }
 .course-detail .duration .detail span {
 	display: block;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 14px;
 	color: #8f9ba1;
 	text-transform: uppercase;
@@ -3269,7 +3284,7 @@ ul.cert-list li span {
 	display: block;
 }
 .how-apply h2 {
-	color: #2a4356;
+	color: #2b562a;
 }
 .how-apply ul {
 	display: block;
@@ -3758,7 +3773,7 @@ ul.blog-listing > li {
 }
 ul.blog-listing > li h2 {
 	padding: 30px 0 20px 0;
-	font-family: 'texgyreadventorregular';
+	font-family: 'Work Sans', serif;
 	font-size: 24px;
 	color: #343a3c;
 	line-height: 36px;
@@ -5191,7 +5206,7 @@ a.btn-circle:hover {
 }
 .coming-soon .right h2{
 	padding-bottom:20px;
-    font-family: 'texgyreadventorregular';
+    font-family: 'Work Sans', serif;';
 	font-size:20px;
 	text-transform:inherit;
 	color:#fff;
@@ -6187,12 +6202,53 @@ a.btn-circle:hover {
 		width: 80%;
 	}
 	.about ul.our-links li .detail a.more {
-		width: 30px;
-		height: 30px;
-		line-height: 24px;
-		font-size: 16px;
+		/* width: 30px; */
+		/* border-radius: 2pc; */
+		/* padding: 6px 10px; */
+		height: 35px;
+		line-height: 10px;
+		/* font-size: 16px; */
 		position: relative;
+		font-size: 1.5rem;
+    		padding: .75rem 2rem;
+		    appearance: none;
+		    background-color: #FFFFFF;
+		    border-radius: 40em;
+		    border-style: none;
+		    box-shadow: #ADCFFF 0 -12px 6px inset;
+		    box-sizing: border-box;
+		    color: #000000;
+		    cursor: pointer;
+		    /* display: inline-block; */
+		    /* font-family: -apple-system,sans-serif; */
+		    /* font-size: 1.2rem; */
+		    font-weight: 700;
+		    letter-spacing: -.24px;
+		    /* margin: 0; */
+		    outline: none;
+		    /* padding: 1rem 1.3rem; */
+		    quotes: auto;
+		    text-align: center;
+		    text-decoration: none;
+		    transition: all .15s;
+		    user-select: none;
+		    -webkit-user-select: none;
+		    touch-action: manipulation;
 	}
+
+	.about ul.our-links li .detail a.more {
+		/* background-color: #FFC229; */
+		box-shadow: #0C9E11 0 -6px 8px inset;
+		transform: scale(1.125);
+	    }
+	    
+	    .about ul.our-links li .detail a.more {
+		transform: scale(1.025);
+	    }
+
+
+
+
 	.about .left-block {
 		padding-bottom: 30px;
 	}

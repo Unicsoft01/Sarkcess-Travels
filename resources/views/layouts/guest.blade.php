@@ -22,49 +22,14 @@
     <link href="{{ url('/') }}/frontend/assets/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/frontend/css/animate.css" rel="stylesheet">
     <link href="{{ url('/') }}/frontend/css/custom.css" rel="stylesheet">
+    <link href="{{ url('/') }}/frontend/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="{{ url('/') }}/frontend/js/html5shiv.min.js"></script>
-        <script src="{{ url('/') }}/frontend/js/respond.min.js"></script>
-        <![endif]-->
+
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-
-    <style>
-        /* body, * {
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-        } */
-         
-         .btn-success{
-            background-color: #0c9e11;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-         }
-         .btn-success:hover{
-            background-color: #292b2965;
-         }
-
-         .bg-success{
-            background-color: #0c9e11;
-         }
-
-        .bg-secondary{
-            background-color: #292b29fd;
-         }
-    </style>
 
 </head>
 
