@@ -27,7 +27,7 @@
                             industry.</p>
                         <a href="about.html" class="btn btn-success animated fadeInUp">Know More <span
                                 class="icon-more-icon"></span></a>
-                        <a href="gallery.html" class="btn white animated fadeInUp hidden-xs">Take a Tour <span
+                        <a href="gallery.html" class="btn white animated fadeInUp hidden-xs">Contact Us <span
                                 class="icon-more-icon"></span></a>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <h1 class="animated fadeInLeft">Online MBA</h1>
                         <p class="animated fadeInLeft">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry.</p>
-                        <a href="about.html" class="btn btn-success animated fadeInLeft">Know More <span
+                        <a href="about.html" class="btn btn-success animated fadeInLeft">Apply Now! <span
                                 class="icon-more-icon"></span></a>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         the industry's</p>
                 </li>
             </ul>
-            <div class="button-wrapper"> <a href="apply-online.html" class="btn">apply now <span
+            <div class="button-wrapper"> <a href="apply-online.html" class="btn btn-success">apply now <span
                         class="icon-more-icon"></span></a> </div>
         </div>
     </section>
@@ -291,7 +291,7 @@
     <!-- ==============================================
     ** How Study **
     =================================================== -->
-    <section class="how-study padding-lg">
+    {{-- <section class="how-study padding-lg">
         <div class="container">
             <h2> <span>There are many ways to learn</span> How do you want to study?</h2>
             <ul class="row">
@@ -306,7 +306,7 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                       
 
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img1.jpg" class="img-responsive"
@@ -321,7 +321,7 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img2.jpg" class="img-responsive"
                             alt=""></figure>
@@ -335,7 +335,7 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img3.jpg" class="img-responsive"
                             alt=""></figure>
@@ -351,7 +351,7 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
 
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img1.jpg" class="img-responsive"
@@ -366,7 +366,7 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img2.jpg" class="img-responsive"
                             alt=""></figure>
@@ -380,17 +380,21 @@
                                 Study in the UK
                             </a>
                         </div>
-                        {{-- <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a> --}}
+                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                     <figure><img src="{{ url('/') }}/frontend/images/how-study-img3.jpg" class="img-responsive"
                             alt=""></figure>
                 </li>
             </ul>
         </div>
-    </section>
+    </section> --}}
 
-    <div class="ag-container">
+
+
+    {{-- <div class="ag-container">
         <div class="ag-format-container">
+            <h2 style="text-align: center;padding-top: 40px; font-size: 30px;"> Browse by Courses</h2>
+            <p style="text-align: center;padding-top: 20px; font-size: 20px;">What would you like to study abroad?</p>
             <div class="ag-courses_box">
                 <div class="ag-courses_item">
                     <a href="#" class="ag-courses-item_link">
@@ -486,68 +490,330 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div> --}}
+    <div class="wrapper">
+        <!-- browse_by_courses -->
+        <div class="browse_by_courses">
+            <!-- browse_by_courses -->
 
-                <div class="ag-courses_item">
-                    <a href="#" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg">
+            <div class="container">
+                <h2 class="section_title gradient"> <span> Browse by courses</span></h2>
+                <p class="section_sub_title">What do you want to study abroad?</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain mba">
+                            <a href="https://www.jeduka.com/mba-colleges-universities-abroad">
+                                <h3>MBA</h3>
+                            </a>
                         </div>
-                        <div class="ag-courses-item_title">
-                            Digital Marketing
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient ScienceProfessions">
+                            <a href="https://www.jeduka.com/science-colleges-universities-abroad">
+                                <h3>Science</h3>
+                            </a>
                         </div>
-                    </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain Architecture">
+                            <a href="https://www.jeduka.com/arts-colleges-universities-abroad">
+                                <h3>Arts</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient BusinessManagement">
+                            <a href="https://www.jeduka.com/management-colleges-universities-abroad">
+                                <h3>Management</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient ComputerScience">
+                            <a href="https://www.jeduka.com/information-technology-colleges-universities-abroad">
+                                <h3>Information Technology(IT)</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain EducationTraining">
+                            <a href="https://www.jeduka.com/arts/education-colleges-universities-abroad">
+                                <h3>Education &amp; Training</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient Engineering">
+                            <a href="https://www.jeduka.com/engineering-colleges-universities-abroad">
+                                <h3>Engineering</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain Medicine-healthcare">
+                            <a href="https://www.jeduka.com/medicine-and-healthcare-colleges-universities-abroad">
+                                <h3>Medicine and HealthCare</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain Hospitality">
+                            <a href="https://www.jeduka.com/hospitality-and-tourism-colleges-universities-abroad">
+                                <h3>Hospitality &amp; Tourism</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient Bankingfinance">
+                            <a href="https://www.jeduka.com/banking-and-finance-colleges-universities-abroad">
+                                <h3>Banking &amp; Finance</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner plain Journalismmedia">
+                            <a href="https://www.jeduka.com/media-films-colleges-universities-abroad">
+                                <h3>Media Films</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_main">
+                        <div class="box_inner gradient Law">
+                            <a href="https://www.jeduka.com/law-colleges-universities-abroad">
+                                <h3>Law</h3>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="ag-courses_item">
-                    <a href="#" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
+            <!-- browse_by_courses -->
+        </div>
+        <!-- browse_by_courses -->
+        <!-- browse_by_countries -->
+        <div class="browse_by_countries">
+            <!-- easy_process_section -->
+            <!-- <div class="browse_by_countries"> -->
+            <div class="container">
+                <h2 class="section_title gradient"> <span> Browse by countries </span></h2>
+                <p class="section_sub_title">Where do you want to study abroad?</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-usa">
+                            <div class="box">
+                                <img width="530" height="355" src="https://www.jeduka.com/images_v4/usa-bg.webp"
+                                    class="bg_img" alt="USA">
+                                <div class="content">
+                                    <h3>USA</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-canada">
+                            <div class="box countries">
+                                <img width="530" height="355"
+                                    src="https://www.jeduka.com/images_v4/canada-bg.webp" class="bg_img"
+                                    alt="Canada">
+                                <div class="content">
+                                    <h3>Canada</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-france">
+                            <div class="box countries">
+                                <img width="530" height="355"
+                                    src="https://www.jeduka.com/images_v4/France-bg.webp" class="bg_img"
+                                    alt="France">
+                                <div class="content">
+                                    <h3>France</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-germany">
+                            <div class="box countries">
+                                <img width="530" height="355"
+                                    src="https://www.jeduka.com/images_v4/Germany-bg.webp" class="bg_img"
+                                    alt="Germany">
+                                <div class="content">
+                                    <h3>Germany</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-netherlands">
+                            <div class="box countries">
+                                <img width="530" height="355"
+                                    src="https://www.jeduka.com/images_v4/Netherlands-bg.webp" class="bg_img"
+                                    alt="Netherlands">
+                                <div class="content">
+                                    <h3>Netherlands</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="https://www.jeduka.com/study-in-uk">
+                            <div class="box countries">
+                                <img width="530" height="355" src="https://www.jeduka.com/images_v4/uk-bg.webp"
+                                    class="bg_img" alt="UK">
+                                <div class="content">
+                                    <h3> UK </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-100 btn_area text-center">
+                        <a href="https://www.jeduka.com/study-abroad" class="btn-2 view_all_btn btn btn-success">View
+                            All Countries
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- browse_by_countries -->
+        </div>
+        <!-- browse_by_countries -->
 
-                        <div class="ag-courses-item_title">
-                            Interior Design
+
+        {{-- browse by exams --}}
+        <div class="ag-container" style="background-color: rgb(84, 167, 81); padding-top: 30px;">
+            <div class="exam-container">
+                <p class="container-title">Study Abroad Exams<br>
+                    <small style="font-size: 24px">All You Need to Know About Entrance Exams to Study Abroad.</small>
+                </p>
+
+                <div class="gradient-cards">
+                    <div class="card">
+                        <a href="#">
+                            <div class="container-card bg-green-box">
+                                <p class="card-title">Zero-cost Possibilities</p>
+                                <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No
+                                    variable
+                                    rates. No interest charged, ever.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-card bg-green-box">
+
+                            <p class="card-title">Zero-cost Possibilities</p>
+                            <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No
+                                variable
+                                rates. No interest charged, ever.</p>
                         </div>
+                    </div>
+                    <div class="card">
+                        <div class="container-card bg-green-box">
 
-                        <div class="ag-courses-item_date-box">
-                            Start:
-                            <span class="ag-courses-item_date">
-                                31.10.2022
-                            </span>
+                            <p class="card-title">Zero-cost Possibilities</p>
+                            <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No
+                                variable
+                                rates. No interest charged, ever.</p>
                         </div>
-                    </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="container-card bg-white-box">
+
+                            <p class="card-title">Multi-Asset Collateral</p>
+                            <p class="card-description">Deposit a variety of assets on Hubble, raise your collateral
+                                ratio,
+                                and
+                                unlock the liquidity in your wallet.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="container-card bg-yellow-box">
+
+                            <p class="card-title">Get Yield on Deposits</p>
+                            <p class="card-description">While your collateral is deposited, delegate it to earn the
+                                highest
+                                yield available in the Solana ecosystem.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="container-card bg-blue-box">
+                            <p class="card-title">Get up to 11x Leverage</p>
+                            <p class="card-description">Hubble’s capital-efficient 110% collateral ratio lets users
+                                leverage up
+                                to 11x on their deposits.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <!-- browse_by_courses2 -->
+        <div class="latest_news">
+            <div class="container">
+                <h2 class="section_title gradient"> <span>Application &amp; Admission Assistance</span></h2>
+                <p class="section_sub_title"></p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="round_box">
+                            <a href="https://www.jeduka.com/application-guide/sop-statement-of-purpose">
+                                <img width="88" height="67"
+                                    src="https://www.jeduka.com/storage/application_guide/1601467473_sop.png"
+                                    alt="SOP">
+                                <h4>SOP</h4>
+                                <p>SOP - Statement of Purpose</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="round_box">
+                            <a href="https://www.jeduka.com/application-guide/letter-of-recommendation">
+                                <img width="88" height="67"
+                                    src="https://www.jeduka.com/storage/application_guide/1601467455_lor.png"
+                                    alt="LOR">
+                                <h4>LOR</h4>
+                                <p>Letter of Recommendation</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="round_box">
+                            <a href="https://www.jeduka.com/application-guide/cv-curriculum-vitae">
+                                <img width="88" height="67"
+                                    src="https://www.jeduka.com/storage/application_guide/1601467417_cv.png"
+                                    alt="CV">
+                                <h4>CV</h4>
+                                <p>Curriculum Vitae</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="round_box">
+                            <a href="https://www.jeduka.com/application-guide/general-visa-process">
+                                <img width="88" height="67"
+                                    src="https://www.jeduka.com/storage/application_guide/1601467498_Student_visa.png"
+                                    alt="Visa">
+                                <h4>Visa</h4>
+                                <p>Student Visa process</p>
+                            </a>
+                        </div>
+                    </div>
 
-    <!-- ==============================================
-    ** Why Choose **
-    =================================================== -->
-    <section class="why-choose padding-lg">
-        <div class="container">
-            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
-            <ul class="our-strength">
-                <li>
-                    <div class="icon"><span class="icon-certification-icon"> </span></div>
-                    <span class="counter">36</span>
-                    <div class="title">Certified Courses</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-student-icon"></span></div>
-                    <span class="counter">258,658</span>
-                    <div class="title">Students Enrolled </div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-book-icon"></span></div>
-                    <div class="couter-outer"><span class="counter">95</span><span>%</span></div>
-                    <div class="title">Passing to Universities</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-parents-icon"></span></div>
-                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
-                    <div class="title">Satisfied Parents</div>
-                </li>
-            </ul>
+                </div>
+                <div class="row">
+                    <div class="w-100 btn_area text-center" style="margin-top: 22px;">
+                        <a href="https://www.jeduka.com/register.html" class="btn-2 apply_btn btn btn-success">Apply Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </div>
 
     <!-- ==============================================
     ** News & Events **
@@ -629,9 +895,35 @@
     </section>
 
     <!-- ==============================================
-    ** Campus Tour **
+    ** Why Choose **
     =================================================== -->
-
+    <section class="why-choose padding-lg">
+        <div class="container">
+            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
+            <ul class="our-strength">
+                <li>
+                    <div class="icon"><span class="icon-certification-icon"> </span></div>
+                    <span class="counter">36</span>
+                    <div class="title">Certified Courses</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-student-icon"></span></div>
+                    <span class="counter">258,658</span>
+                    <div class="title">Students Enrolled </div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-book-icon"></span></div>
+                    <div class="couter-outer"><span class="counter">95</span><span>%</span></div>
+                    <div class="title">Passing to Universities</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-parents-icon"></span></div>
+                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
+                    <div class="title">Satisfied Parents</div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <!-- ==============================================
     ** Brands **

@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Homepage extends Component
 {
-    #[Layout('layouts.guest')] 
+    #[Layout('layouts.frontend')] 
     public function render()
     {
         return view('frontend.homepage');

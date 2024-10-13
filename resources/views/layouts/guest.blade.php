@@ -1,335 +1,120 @@
-<!doctype html>
-<html lang="fr">
+<html lang="en" class="h-100" data-bs-theme="dark" data-topbar-color="dark" data-menu-color="dark"
+    data-menu-size="hidden">
 
 <head>
+    <!-- Title Meta -->
     <meta charset="utf-8">
+    <title>{{ config('app.name') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully responsive premium admin dashboard template">
+    <meta name="author" content="Techzaa">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/') }}/frontend/images/favicon.ico">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ url('/') }}/assets/images/favicon.ico">
 
-    <!-- CSS -->
-    <link href="{{ url('/') }}/frontend/css/reset.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/css/fonts.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/select2/css/select2.min.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/magnific-popup/css/magnific-popup.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/iconmoon/css/iconmoon.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/assets/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/css/animate.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/css/custom.css" rel="stylesheet">
-    <link href="{{ url('/') }}/frontend/css/styles.css" rel="stylesheet">
+    <!-- Vendor css (Require in all Page) -->
+    <link href="{{ url('/') }}/assets/css/vendor.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Icons css (Require in all Page) -->
+    <link href="{{ url('/') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
 
+    <!-- App css (Require in all Page) -->
+    <link href="{{ url('/') }}/assets/css/app.min.css" rel="stylesheet" type="text/css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Theme Config js (Require in all Page) -->
+    <script src="{{ url('/') }}/assets/js/config.js"></script>
+    <style type="text/css" data-href="lib\style.css">
+        .star-rating {
+            width: 0;
+            position: relative;
+            display: inline-block;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDguOSIgaGVpZ2h0PSIxMDMuNiIgdmlld0JveD0iMCAwIDEwOC45IDEwMy42Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2UzZTZlNjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPnN0YXJfMDwvdGl0bGU+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTA4LjkgMzkuNiA3MS4zIDM0LjEgNTQuNCAwIDM3LjYgMzQuMSAwIDM5LjYgMjcuMiA2Ni4xIDIwLjggMTAzLjYgNTQuNCA4NS45IDg4LjEgMTAzLjYgODEuNyA2Ni4xIDEwOC45IDM5LjYiLz48L2c+PC9nPjwvc3ZnPg0K);
+            background-position: 0 0;
+            background-repeat: repeat-x;
+            cursor: pointer;
+        }
 
+        .star-rating .star-value {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: url('data:image/svg+xml;base64,PHN2Zw0KCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwOC45IiBoZWlnaHQ9IjEwMy42IiB2aWV3Qm94PSIwIDAgMTA4LjkgMTAzLjYiPg0KCTxkZWZzPg0KCQk8c3R5bGU+LmNscy0xe2ZpbGw6I2YxYzk0Nzt9PC9zdHlsZT4NCgk8L2RlZnM+DQoJPHRpdGxlPnN0YXIxPC90aXRsZT4NCgk8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4NCgkJPGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj4NCgkJCTxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1NC40IDAgNzEuMyAzNC4xIDEwOC45IDM5LjYgODEuNyA2Ni4xIDg4LjEgMTAzLjYgNTQuNCA4NS45IDIwLjggMTAzLjYgMjcuMiA2Ni4xIDAgMzkuNiAzNy42IDM0LjEgNTQuNCAwIi8+DQoJCTwvZz4NCgk8L2c+DQo8L3N2Zz4NCg==');
+            background-repeat: repeat-x;
+        }
+
+        .star-rating.disabled {
+            cursor: default;
+        }
+
+        .star-rating.is-busy {
+            cursor: wait;
+        }
+
+        .star-rating .star-value.rtl {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+            right: 0;
+            left: auto;
+        }
+    </style>
 </head>
 
-<body>
+<body class="h-100">
+    <div class="d-flex flex-column h-100 p-3">
 
-    <!-- ==============================================
-    ** Preloader **
-    =================================================== -->
-    {{-- <div id="loading">
-        <div class="element">
-            <div class="sk-folding-cube">
-                <div class="sk-cube1 sk-cube"></div>
-                <div class="sk-cube2 sk-cube"></div>
-                <div class="sk-cube4 sk-cube"></div>
-                <div class="sk-cube3 sk-cube"></div>
-            </div>
-        </div>
-    </div> --}}
+        <div class="d-flex flex-column flex-grow-1">
+            <div class="row h-100">
+                <div class="col-xxl-7">
+                    <div class="row justify-content-center h-100">
+                        <div class="col-lg-6 py-lg-5">
+                            <div class="d-flex flex-column h-100 justify-content-center">
+                                <div class="auth-logo mb-4">
+                                    <a href="index.html" class="logo-dark">
+                                        <img src="assets/images/logo-dark.png" height="24" alt="logo dark">
+                                    </a>
 
-    <!-- ==============================================
-    ** Header **
-    =================================================== -->
-    <header>
-        <!-- Start Header top Bar -->
-        <div class="header-top">
-            <div class="container clearfix">
-                <ul class="follow-us hidden-xs">
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                </ul>
-                <div class="right-block clearfix">
-                    <ul class="top-nav hidden-xs">
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="apply-online.html">Apply Online</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq1.html">FAQs</a></li>
-                    </ul>
-                    <div class="lang-wrapper">
-                        <div class="select-lang">
-                            <div class="" style="padding: 10px 4px 0px 0px; color: rgb(23, 164, 59);">
-                                <span class="currency_select">
-                                    Email
-                                </span>
-                                <a href="mailto:info@edumart.org">
-                                    info@edumart.org
-                                </a>
+                                    <a href="{{ route('welcome') }}" class="logo-light">
+                                        <img src="assets/images/logo-light.png" height="24" alt="logo light">
+                                    </a>
+                                </div>
+                                {{ $slot }}
+
                             </div>
                         </div>
-                        <div class="select-lang2">
-                            <select class="custom_select">
-                                <option value="en">English</option>
-                                <option value="fr">French</option>
-                                <option value="de">German</option>
-                            </select>
+                    </div>
+                </div>
+
+                <div class="col-xxl-5 d-none d-xxl-flex">
+                    <div class="card h-100 mb-0 overflow-hidden">
+                        <div class="d-flex flex-column h-100">
+                            <img src="assets/images/small/img-10.jpg" alt="" class="w-100 h-100">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Header top Bar -->
-        <!-- Start Header Middle -->
-        <div class="container header-middle">
-            <div class="row"> <span class="col-xs-6 col-sm-3"><a href="index.html"><img
-                            src="{{ url('/') }}/frontend/images/logo.png" class="img-responsive"
-                            alt=""></a></span>
-                <div class="col-xs-6 col-sm-3"></div>
-                <div class="col-xs-6 col-sm-9">
-                    <div class="contact clearfix">
-                        <ul class="hidden-xs">
-                            <li> <span>Email</span> <a href="mailto:info@edumart.org">info@edumart.org</a> </li>
-                            <li> <span>Toll Free</span> 1800 000 0000 </li>
-                        </ul>
-                        <a href="login.html" class="login">Student Login <span class="icon-more-icon"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Middle -->
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse"
-                        class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse" id="navbar">
-                    <form class="navbar-form navbar-right">
-                        <input type="text" placeholder="Search Now" class="form-control">
-                        <button class="search-btn"><span class="icon-search-icon"></span></button>
-                    </form>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Home <i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Index 1</a></li>
-                                <li><a href="index2.html">Index 2</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="about.html">About</a></li>
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Our Courses <i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="course-listing.html">course Listing</a></li>
-                                <li><a href="mba-marketing.html">MBA Marketing</a></li>
-                                <li><a href="mba-general.html">MBA General</a></li>
-                                <li><a href="mba-operations.html">MBA Operations</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="gallery.html">Gallery</a></li>
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Pages <i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="visible-xs"><a href="register.html">Register</a></li>
-                                <li class="visible-xs"><a href="apply-online.html">Apply online</a></li>
-                                <li class="visible-xs"><a href="blog.html">Blog</a></li>
-                                <li class="visible-xs"><a href="faq.html">FAQs</a></li>
-                                <li><a href="news.html">Latest News</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="faq1.html">FAQ 1</a></li>
-                                <li><a href="faq2.html">FAQ 2</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li class="hidden-xs"><a href="privacy.html">Privacy Policy</a></li>
-                                <li class="hidden-xs"><a href="terms.html">Terms of Use</a></li>
-                                <li class="hidden-xs"><a href="generic-ui.html">Generic UI</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- End Navigation -->
-    </header>
+    </div>
 
-    {{ $slot }}
+    <!-- Vendor Javascript (Require in all Page) -->
+    <script src="{{ url('/') }}/assets/js/vendor.js"></script>
 
-    <!-- ==============================================
-    ** Footer **
-    =================================================== -->
-    <footer class="footer">
-        <!-- Start Footer Top -->
-        <div class="container">
-            <div class="row row1">
-                <div class="col-sm-9 clearfix">
-                    <div class="foot-nav">
-                        <h3>About US</h3>
-                        <ul>
-                            <li><a href="#">Edumart Group of Institutions</a></li>
-                            <li><a href="#">Our Institutes and Universities</a></li>
-                            <li><a href="#">Management Team</a></li>
-                            <li><a href="#">Approval and Recognition</a></li>
-                            <li><a href="#">Evaluation & Assessments</a></li>
-                        </ul>
-                    </div>
-                    <div class="foot-nav">
-                        <h3>Courses</h3>
-                        <ul>
-                            <li><a href="#">2 Year Online MBA General</a></li>
-                            <li><a href="#">Certificate in HRM</a></li>
-                            <li><a href="#">Certificate in Marketing</a></li>
-                            <li><a href="#">Certificate in Finance</a></li>
-                            <li><a href="#">Corporate Programs</a></li>
-                        </ul>
-                    </div>
-                    <div class="foot-nav">
-                        <h3>Why Edumart</h3>
-                        <ul>
-                            <li><a href="#">Introduction</a></li>
-                            <li><a href="#">Learn Everywhere</a></li>
-                            <li><a href="#">Modern Curriculum</a></li>
-                            <li><a href="#">Placement Assistance</a></li>
-                            <li><a href="#">Eligibility</a></li>
-                        </ul>
-                    </div>
-                    <div class="foot-nav">
-                        <h3>Learning Experience</h3>
-                        <ul>
-                            <li><a href="#">Course Preparations</a></li>
-                            <li><a href="#">Guided lessons</a></li>
-                            <li><a href="#">Interactive Practice</a></li>
-                            <li><a href="#">Virtual Classroom</a></li>
-                            <li><a href="#">Peer Learning</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="footer-logo hidden-xs"><a href="index.html"><img
-                                src="{{ url('/') }}/frontend/images/footer-logo.png" class="img-responsive"
-                                alt=""></a></div>
-                    <p>© 2020 <span>Edumart</span>. All rights reserved</p>
-                    <ul class="terms clearfix">
-                        <li><a href="terms.html">TERMS OF USE</a></li>
-                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                        <li><a href="#">SITEMAP</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Top -->
-        <!-- Start Footer Bottom -->
-        <div class="bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="connect-us">
-                            <h3>Connect with Us</h3>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="subscribe">
-                            <h3>Subscribe with Us</h3>
-                            <!-- Begin MailChimp Signup Form -->
-                            <div id="mc_embed_signup">
-                                <form
-                                    action="http://protechtheme.us16.list-manage.com/subscribe/post?u=cd5f66d2922f9e808f57e7d42&amp;id=ec6767feee"
-                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                    class="validate" target="_blank" novalidate>
-                                    <div id="mc_embed_signup_scroll">
-                                        <input type="email" value="" name="EMAIL" class="email"
-                                            id="mce-EMAIL" placeholder="enter your email address" required>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                            <input type="text" name="b_cd5f66d2922f9e808f57e7d42_ec6767feee"
-                                                tabindex="-1" value="">
-                                        </div>
-                                        <div class="clear">
-                                            <input type="submit" value="Subscribe" name="subscribe"
-                                                id="mc-embedded-subscribe" class="button">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--End mc_embed_signup-->
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="instagram">
-                            <h3>@INSTAGRAM</h3>
-                            <ul class="clearfix">
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img1.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img2.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img3.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img4.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img5.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                                <li><a href="#">
-                                        <figure><img src="{{ url('/') }}/frontend/images/insta-img6.jpg"
-                                                class="img-responsive" alt=""></figure>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Bottom -->
-    </footer>
+    <!-- App Javascript (Require in all Page) -->
+    <script src="{{ url('/') }}/assets/js/app.js"></script>
 
-    <!-- Scroll to top -->
-    <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
-    <!-- Optional JavaScript -->
-    <script src="{{ url('/') }}/frontend/js/jquery.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/select2/js/select2.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/matchHeight/js/matchHeight-min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/bxslider/js/bxslider.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/waypoints/js/waypoints.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/counterup/js/counterup.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/magnific-popup/js/magnific-popup.min.js"></script>
-    <script src="{{ url('/') }}/frontend/assets/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="{{ url('/') }}/frontend/js/modernizr.custom.js"></script>
-    <script src="{{ url('/') }}/frontend/js/custom.js"></script>
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
 </body>
 
 </html>
