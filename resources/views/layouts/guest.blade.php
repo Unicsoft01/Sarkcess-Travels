@@ -10,20 +10,21 @@
     <meta name="author" content="Techzaa">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    @livewireStyles
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ url('/') }}/assets/images/favicon.ico">
 
     <!-- Vendor css (Require in all Page) -->
-    <link href="{{ url('/') }}/assets/css/vendor.min.css" rel="stylesheet" type="text/css">
+    <link data-navigate-once href="{{ url('/') }}/assets/css/vendor.min.css" rel="stylesheet" type="text/css">
 
     <!-- Icons css (Require in all Page) -->
-    <link href="{{ url('/') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link data-navigate-once href="{{ url('/') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
 
     <!-- App css (Require in all Page) -->
-    <link href="{{ url('/') }}/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link data-navigate-once href="{{ url('/') }}/assets/css/app.min.css" rel="stylesheet" type="text/css">
 
     <!-- Theme Config js (Require in all Page) -->
-    <script src="{{ url('/') }}/assets/js/config.js"></script>
+    <script data-navigate-once src="{{ url('/') }}/assets/js/config.js"></script>
     <style type="text/css" data-href="lib\style.css">
         .star-rating {
             width: 0;
@@ -100,11 +101,12 @@
         </div>
     </div>
 
+    @livewireScripts
     <!-- Vendor Javascript (Require in all Page) -->
-    <script src="{{ url('/') }}/assets/js/vendor.js"></script>
+    <script data-navigate-once src="{{ url('/') }}/assets/js/vendor.js"></script>
 
     <!-- App Javascript (Require in all Page) -->
-    <script src="{{ url('/') }}/assets/js/app.js"></script>
+    <script data-navigate-once src="{{ url('/') }}/assets/js/app.js"></script>
 
 
 
