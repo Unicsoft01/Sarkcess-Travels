@@ -226,13 +226,18 @@
 .container-card {
     position: relative;
     border: 2px solid transparent;
-    background: linear-gradient(71deg, #ecf5f1, #b0dbc9, #b9eede, #4f738b);
+    /* background: linear-gradient(71deg, #fafafa, #c7d1cd, #b9eede, #e5e7e9); */
+    background: white;
     background-clip: padding-box;
     border-radius: 45px;
     padding: 35px;
     img {
         margin-bottom: 25px;
     }
+}
+
+.container-card:hover {
+    border: 8px solid rgba(133, 108, 248, 0.37);
 }
 
 .bg-green-box,
@@ -594,7 +599,7 @@
     z-index: 1;
 }
 .browse_by_countries:before {
-    content: ' ';
+    content: " ";
     width: 100%;
     height: 100%;
     padding: 0;
@@ -607,7 +612,7 @@
     z-index: -1;
 }
 .browse_by_countries:after {
-    content: ' ';
+    content: " ";
     width: 100%;
     height: 100%;
     padding: 0;
@@ -635,7 +640,7 @@
     max-width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 .browse_by_countries .box:hover .bg_img {
     transform: scale(1.2);
@@ -650,14 +655,15 @@
     height: 100%;
     padding: 0 0;
     vertical-align: middle;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.5);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 100%}
+    width: 100%;
+}
 .browse_by_countries .box .content h3 {
     margin: 0;
     color: #fff;
@@ -669,7 +675,7 @@
 }
 .browse_by_countries .btn_area .view_all_btn {
     min-width: 160px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 .browse_by_countries .row {
     position: relative;
@@ -686,9 +692,20 @@
     font-weight: 700;
 }
 .section_title.gradient span {
-    background: -webkit-linear-gradient(left top, right top, color-stop(10%, #53a752), color-stop(40%, #299680), color-stop(70%, #1a67a6));
+    background: -webkit-linear-gradient(
+        left top,
+        right top,
+        color-stop(10%, #53a752),
+        color-stop(40%, #299680),
+        color-stop(70%, #1a67a6)
+    );
     background: -o-linear-gradient(left, #53a752 10%, #299680 40%, #1a67a6 70%);
-    background: linear-gradient(to right, #53a752 10%, #299680 40%, #1a67a6 70%);
+    background: linear-gradient(
+        to right,
+        #53a752 10%,
+        #299680 40%,
+        #1a67a6 70%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -716,7 +733,7 @@
     background-repeat: no-repeat;
     background-position: 100% 100%;
     padding: 0;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
     margin: 0 0 30px 0;
 }
 .browse_by_courses .box_inner:hover {
@@ -736,7 +753,7 @@
     position: relative;
 }
 .browse_by_courses .box_inner a:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 17px;
     width: 66px;
@@ -795,7 +812,7 @@
     font-weight: 600;
     margin: 0;
     text-decoration: none;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     position: absolute;
     top: 130px;
     left: 0;
@@ -823,7 +840,7 @@
     padding: 20px;
     border-radius: 8px;
     margin: 0 0 30px 0;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 }
 .browse_by_courses2 .box:hover {
     box-shadow: 0 3px 15px 2px #424242;
@@ -832,7 +849,7 @@
     font-size: 18px;
     color: #535353;
     font-weight: 700;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     margin: 0 0 20px 0;
     padding: 5px 0 0 0;
 }
@@ -883,7 +900,7 @@
     padding: 75px 0;
     display: inline-block;
     text-decoration: none;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 }
 .latest_news .round_box a:hover {
     box-shadow: 0 3px 15px 2px #848484;
@@ -902,7 +919,7 @@
 .latest_news .round_box:after {
     width: 49px;
     height: 21px;
-    content: ' ';
+    content: " ";
     display: block;
     /* background-image: url(https://www.jeduka.com/images_v4/sprite.png); */
     background-repeat: no-repeat;
@@ -927,7 +944,7 @@
     max-width: 100%;
     width: 100%;
     height: 100%;
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     object-fit: cover;
 }
 .latest_news2 .news_box:hover img {
@@ -951,14 +968,14 @@
 .latest_news2 .news_box .content h3 {
     font-size: 18px;
     color: #fff;
-    opacity: .5;
+    opacity: 0.5;
     margin: 0 0 20px 0;
 }
 .latest_news2 .news_box .content h4 {
     font-size: 30px;
     color: #fff;
     font-weight: 700;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     margin: 0 0 20px 0;
     height: 70px;
     overflow: hidden;
@@ -1004,4 +1021,71 @@
 .latest_news2 .btn_area a:hover {
     color: #333;
     border-bottom: 2px solid #333;
+}
+
+.text-justified {
+    text-align: justify;
+}
+/* spiner */
+.spin-body {
+    margin: 0;
+    padding: 0;
+    font-family: "texgyreadventorbold", "Work Sans";
+    /* background: rgb(243, 246, 248); */
+    background: inherit;
+}
+.spin-center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 0.7s linear infinite;
+}
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    30% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e600e6;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+.ring:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(245, 50, 50, 0.5);
+}
+.spin-span {
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px;
+    animation: text 3s ease-in-out infinite;
+}
+@keyframes text {
+    50% {
+        color: rgb(0, 116, 52);
+    }
 }

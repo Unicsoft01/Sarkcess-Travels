@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="en">
+@php
+    $socialMedia = App\Models\MediaHandles::find(1);
+
+    $sliders = App\Models\SectionTexts::get();
+    $slider1 = $sliders->where('section_id', '=', 1)->first();
+    $slider2 = $sliders->where('section_id', '=', 2)->first();
+    $slider3 = $sliders->where('section_id', '=', 3)->first();
+@endphp
 
 <head>
     <meta charset="utf-8">
@@ -30,13 +38,9 @@
     <link data-navigate-once href="{{ url('/') }}/frontend/css/custom.css" rel="stylesheet">
     <link data-navigate-once href="{{ url('/') }}/frontend/css/styles.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -45,18 +49,23 @@
         <div class="header-top">
             <div class="container clearfix">
                 <ul class="follow-us hidden-xs">
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="{{ $socialMedia->twitter }}"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="{{ $socialMedia->facebook }}"><i class="fa fa-facebook-official"
+                                aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="{{ $socialMedia->gmail }}"><i class="fa fa-google-plus"
+                                aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="{{ $socialMedia->youtube }}"><i class="fa fa-youtube-play"
+                                aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="{{ $socialMedia->insta }}"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
                 </ul>
                 <div class="right-block clearfix">
                     <ul class="top-nav hidden-xs">
                         {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
-                        <li><a href="apply-online.html">Apply Online</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq1.html">FAQs</a></li>
+                        <li><a href="{{ route('apply-free.frontend') }}" wire:navigate>Request for free Advice</a></li>
+                        <li><a href="{{ route('blog.frontend') }}" wire:navigate>Blog</a></li>
+                        <li><a href="{{ route('about-us.frontend') }}" wire:navigate>About Us</a></li>
                     </ul>
                     <div class="lang-wrapper">
                         <div class="select-lang">
@@ -83,14 +92,25 @@
         <!-- End Header top Bar -->
         <!-- Start Header Middle -->
         <div class="container header-middle">
-            <div class="row"> <span class="col-xs-6 col-sm-3"><a href="{{ route('welcome') }}"><img
+            <div class="row"> 
+                <span class="col-xs-6 col-sm-3">
+                    <a href="{{ route('welcome') }}">
+                        <img
                             src="{{ url('/') }}/frontend/images/logo.png" class="img-responsive"
-                            alt=""></a></span>
+                            alt="">
+                        </a>
+                    </span>
                 <div class="col-xs-6 col-sm-3"></div>
                 <div class="col-xs-6 col-sm-9">
                     <div class="contact clearfix">
                         <ul class="hidden-xs">
-                            <li> <span>Email</span> <a href="mailto:info@sarkcesstravels.com">info@sarkcesstravels.com</a> </li>
+                            <li> 
+                                <span>Email</span> 
+                                <a
+                                    href="mailto:info@sarkcesstravels.com">
+                                    info@sarkcesstravels.com
+                                </a> 
+                            </li>
                             {{-- <li> <span>Toll Free</span> 1800 000 0000 </li> --}}
                         </ul>
                         <a href="{{ route('login') }}" wire:navigate class="login">Student Support <span
@@ -105,7 +125,8 @@
             <div class="container">
                 <div class="navbar-header">
                     <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse"
-                        class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span>
+                        class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle
+                            navigation</span>
                         <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
                 </div>
@@ -124,31 +145,84 @@
                         <li> <a href="{{ route('courses.index') }}" wire:navigate>Courses</a></li>
 
                         </li>
-                        <li> <a href="gallery.html">Exams</a></li>
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Contact Us <i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <li> <a href="{{ route('exams.frontend') }}" wire:navigate>Exams</a></li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                Contact Us
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
                             <ul class="dropdown-menu">
-                                <li class="visible-xs"><a href="register.html">Register</a></li>
-                                <li class="visible-xs"><a href="apply-online.html">Apply online</a></li>
-                                <li class="visible-xs"><a href="blog.html">Blog</a></li>
-                                <li class="visible-xs"><a href="faq.html">FAQs</a></li>
-                                <li><a href="news.html">Latest News</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="faq1.html">FAQ 1</a></li>
-                                <li><a href="faq2.html">FAQ 2</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li class="hidden-xs"><a href="privacy.html">Privacy Policy</a></li>
-                                <li class="hidden-xs"><a href="terms.html">Terms of Use</a></li>
-                                <li class="hidden-xs"><a href="generic-ui.html">Generic UI</a></li>
+                                <li><a href="{{ route('contact-us.frontend') }}" wire:navigate>Nigeria</a></li>
+                                <li><a href="testimonials.html">United Kingdom</a></li>
+                                <li><a href="faq1.html">Morocco</a></li>
+
                             </ul>
                         </li>
-                        <li> <a href="contact.html">FAQs</a></li>
+                        <li> <a href="{{ route('faq.frontend') }}" wire:navigate>FAQs</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- End Navigation -->
     </header>
+
+    @if (route('welcome') == url()->current())
+        <!-- ** Banner Carousel ** -->
+        <div class="banner-outer">
+            <div class="banner-slider">
+                <div class="slide1">
+                    <div class="container">
+                        <div class="content animated fadeInRight">
+                            <div class="fl-right">
+                                <h1 class="animated fadeInRight">
+                                    {{ Str::limit($slider1->section_sub_title, $limit = 20, $end = '...') }}
+                                    <span class="animated fadeInRight">
+                                        {{ Str::limit($slider1->section_title, $limit = 12, $end = '...') }}
+                                    </span>
+                                </h1>
+                                <p class="animated fadeInRight">
+                                    {{ Str::limit($slider1->description, $limit = 80, $end = '...') }}
+                                </p>
+                                <a href="about.html" class="btn btn-success animated fadeInRight">Know More <span
+                                        class="icon-more-icon"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide2">
+                    <div class="container">
+                        <div class="content">
+                            <h1 class="animated fadeInUp">
+                                {{ Str::limit($slider2->section_title, $limit = 12, $end = '...') }}
+                            </h1>
+                            <p class="animated fadeInUp">
+                                {{ Str::limit($slider2->description, $limit = 80, $end = '...') }}
+                            </p>
+                            <a href="about.html" class="btn btn-success animated fadeInUp">Know More <span
+                                    class="icon-more-icon"></span></a>
+                            <a href="gallery.html" class="btn white animated fadeInUp hidden-xs">Contact Us <span
+                                    class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide3">
+                    <div class="container">
+                        <div class="content animated fadeInLeft">
+                            <h1 class="animated fadeInLeft">
+                                {{ Str::limit($slider3->section_title, $limit = 12, $end = '...') }}
+                            </h1>
+                            <p class="animated fadeInLeft">
+                                {{ Str::limit($slider3->description, $limit = 80, $end = '...') }}
+                            </p>
+                            <a href="{{ route('apply-free.frontend') }}" wire:navigate
+                                class="btn btn-success animated fadeInLeft">Request Free counselling! <span
+                                    class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
     {{ $slot }}
 
@@ -223,12 +297,35 @@
                         <div class="connect-us">
                             <h3>Connect with Us</h3>
                             <ul class="follow-us clearfix">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->facebook }}">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->twitter }}">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->linkedin }}"><i class="fa fa-linkedin"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->gmail }}"><i class="fa fa-google-plus"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->youtube }}">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ $socialMedia->insta }}">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -237,10 +334,8 @@
                             <h3>Subscribe with Us</h3>
                             <!-- Begin MailChimp Signup Form -->
                             <div id="mc_embed_signup">
-                                <form
-                                    action="http://protechtheme.us16.list-manage.com/subscribe/post?u=cd5f66d2922f9e808f57e7d42&amp;id=ec6767feee"
-                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                    class="validate" target="_blank" novalidate>
+                                <form action="#" method="post" id="mc-embedded-subscribe-form"
+                                    name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll">
                                         <input type="email" value="" name="EMAIL" class="email"
                                             id="mce-EMAIL" placeholder="enter your email address" required>
@@ -259,7 +354,7 @@
                             <!--End mc_embed_signup-->
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    {{-- <div class="col-sm-4">
                         <div class="instagram">
                             <h3>@INSTAGRAM</h3>
                             <ul class="clearfix">
@@ -289,7 +384,7 @@
                                     </a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

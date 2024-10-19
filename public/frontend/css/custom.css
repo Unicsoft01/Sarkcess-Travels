@@ -715,7 +715,8 @@ textarea:focus::placeholder{
 .about {
 	display: block;
 	position: relative;
-	padding: 222px 0 100px 0;
+	/* padding: 222px 0 100px 0; */
+	padding: 70px 0 100px 0;
 	background: url(../images/about-bg.jpg) no-repeat center bottom;
 }
 .about ul.our-links {
@@ -2066,7 +2067,7 @@ a.scroll-top:hover {
     width: 220px;
     height: 78px;
     padding: 15px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 50px;
     position: absolute;
     margin: 0 auto;
@@ -2076,7 +2077,8 @@ a.scroll-top:hover {
     transform: translateY(-50%);
 }
 .intro-sec .video-block .play-outer figure{
-    width: 46px;
+    /* width: 46px; */
+    width: 44px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -2084,24 +2086,27 @@ a.scroll-top:hover {
     width: calc(100% - 50px);
     padding-left: 12px;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     font-family: 'texgyreadventorbold';
     font-size: 16px;
-    color: #565656;
+    color: #173017;
     line-height: 20px;
 }
 .intro-sec h2{
     padding-bottom: 35px;
     font-size: 36px;
-    color: #353434;
+    color: #343534;
     line-height: 45px;
     text-transform: capitalize;
 }
 .intro-sec h2 span{
     display: block;
+    color:rgb(2, 141, 44);
 }
 .intro-sec p{
-    color: #575d60;
+    /* color: #575d60; */
+    color: #0e4d18;
+    text-align: justify;
 }
 .intro-sec .know-more-wrapper {
     display: block;
@@ -6180,7 +6185,8 @@ a.btn-circle:hover {
 		height: 350px;
 	}
 	.about {
-		padding: 226px 0 40px;
+		/* padding: 226px 0 40px; */
+		padding: 50px 0 40px;
 	}
 	.about .video-block a {
 		width: 50px;

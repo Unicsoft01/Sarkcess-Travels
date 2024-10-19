@@ -1,6 +1,6 @@
 @props([
     'name',
-    'label',
+    'label' => 'Field',
     'type',
 ])
 

@@ -12,14 +12,14 @@
      var html = document.getElementsByTagName("html")[0];
 
      var defaultConfig = {
-          theme: "light",             // ['light', 'dark']
+          theme: "dark",             // ['light', 'dark']
 
           topbar: {
-               color: "light",       // ['light', 'dark']
+               color: "dark",       // ['light', 'dark']
           },
 
           menu: {
-               size: "sm-hover-active",   // [ 'default', 'sm-hover-active', 'sm-hover-active', 'condensed', 'full']
+               size: "default",   // [ 'default', 'sm-hover-active', 'sm-hover-active', 'condensed', 'full']
                color: "dark",            // ['light', 'dark']
           },
      };
