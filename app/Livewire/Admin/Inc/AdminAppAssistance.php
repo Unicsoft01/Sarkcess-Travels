@@ -22,4 +22,9 @@ class AdminAppAssistance extends Component
     {
         $this->redirectRoute('update.admission-assistance', ['id' => $id]);
     }
+
+    public function OpenPostEditor($id)
+    {
+        $this->redirectRoute('admin.admission-assistance-create', ['id' => $id]);
+    }
 }

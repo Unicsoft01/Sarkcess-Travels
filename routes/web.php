@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\McePostsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\HtmlMinifier;
 use App\Livewire\Admin\HomeIndex;
+use App\Livewire\Admin\Inc\AdAssistanceCreate;
 use App\Livewire\Admin\Inc\EditAppAssistance;
 use App\Livewire\Admin\SocialMediaIndex;
 use App\Livewire\Frontend\AboutUs;
@@ -28,6 +30,8 @@ Route::middleware([HtmlMinifier::class])->group(function () {
     Route::get('/about-us', AboutUs::class)->name('about-us.frontend');
     Route::get('/blog', Blog::class)->name('blog.frontend');
     Route::get('/sop', Sop::class)->name('sop.frontend');
+    Route::view('welcome/some/wp
+', 'welcome');
 
     Route::middleware(['auth', 'verified'])->group(function () {
 
@@ -38,6 +42,13 @@ Route::middleware([HtmlMinifier::class])->group(function () {
         Route::get('homepage/create', HomeIndex::class)->name('admin.homepage');
         Route::get('update/adassistance/{id}', EditAppAssistance::class)->name('update.admission-assistance');
         Route::get('social-media/create', SocialMediaIndex::class)->name('admin.social-media');
+        Route::get('create-admission-assistance/{id}', AdAssistanceCreate::class)->name('admin.admission-assistance-create');
+
+        Route::controller(McePostsController::class)->group(function () {
+            // Route::post('exampage/post/{id}', 'ExamPostsCreate')->name('examposts.create');
+
+            Route::patch('/ex_patc', 'ExamPostsUpdate')->name('examposts.patch');
+        });
     });
 
 

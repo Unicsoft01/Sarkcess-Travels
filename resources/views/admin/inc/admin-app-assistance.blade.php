@@ -40,15 +40,15 @@
                                 <td>{{ Str::of($assist->fullname)->headline() }}</td>
                                 <td>
                                     <div class="d-flex gap-2">
-                                        <a href="#!" class="btn btn-light btn-sm">
+                                        <a href="{{ url('/') }}/{{ $assist->slug }}" target="_blank" class="btn btn-light btn-sm">
                                             Guest View
                                         </a>
-                                        <button wire:click="$dispatch('edit-assistance', {id: {{ $assist->ad_id }}})" wire:navigate class="btn btn-soft-primary btn-sm">
+                                        <button wire:click="$dispatch('edit-assistance', {id: {{ $assist->post_id }}})" wire:navigate class="btn btn-soft-primary btn-sm">
                                             Edit {{ Str::upper($assist->short_name) }}
                                         </button>
-                                        <a href="#!" class="btn btn-soft-success btn-sm">
+                                        <button wire:navigate wire:click="OpenPostEditor({{ $assist->post_id }})" class="btn btn-soft-success btn-sm">
                                             Post Editor
-                                        </a>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
