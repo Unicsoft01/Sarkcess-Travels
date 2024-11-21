@@ -52,7 +52,7 @@ class ApplyFreeAdvice extends Component
     public function create()
     {
         $validatedData = $this->validate();
-        dd($validatedData);
+        // dd($validatedData);
         FreeAdviceApplications::create($this->pull());
 
         try {

@@ -2,8 +2,14 @@
 
 namespace App\Livewire\Frontend\Inc;
 
+use App\Mail\SendCopyOfApplication;
+use App\Mail\WelcomeApplicant;
 use App\Models\Applications;
+use App\Models\User;
+use App\Notifications\NewStudyApplication;
+use Illuminate\Support\Facades\Notification;
 use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 // use Livewire\Attributes\Lazy;
 
@@ -29,6 +35,8 @@ class ApplyNow extends Component
     #[Validate('required')]
     public $budget;
 
+    public $university;
+
     public function mount($id)
     {
         $this->university_id = $id;
@@ -36,16 +44,32 @@ class ApplyNow extends Component
 
     public function create()
     {
-        $this->validate();
+        $validatedData = $this->validate();
         Applications::create($this->pull());
-        $this->dispatch(
-            'swal',
-            [
-                'title' => 'Great!',
-                'message' => 'Your application has been recieved successfully. You should get a response via Email shortly!',
-                'icon' => 'success'
-            ]
-        );
+
+        try {
+            //notify admin via mail
+            $admins = User::where('admin_level', 1)->get();
+            Notification::send($admins, new NewStudyApplication($validatedData));
+
+            // send welcome message to user
+            Mail::to($validatedData['email'])
+                ->send(new WelcomeApplicant($validatedData));
+
+            // send copy to FromEmail
+            $this->SendCopyMail($validatedData);
+            
+            $this->dispatch(
+                'swal',
+                [
+                    'title' => 'Great!',
+                    'message' => 'Your application has been recieved successfully. You should get a response via Email shortly!',
+                    'icon' => 'success'
+                ]
+            );
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     public function render()
@@ -53,8 +77,10 @@ class ApplyNow extends Component
         return view('frontend.inc.apply-now');
     }
 
-    // public function placeholder(array $params = [])
-    // {
-    //     return view('frontend.placeholders.how-to-study-placeholder', $params);
-    // }
+    public function SendCopyMail($data)
+    {
+        $sentFrom = 'apply@sarkcessconsults.org';
+        Mail::to($sentFrom)
+            ->send(new SendCopyOfApplication($data));
+    }
 }
