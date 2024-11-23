@@ -16,6 +16,11 @@ class ApplyNow extends Component
         $this->applications = Applications::with('university:university_id,university')->latest()->get();
     }
 
+    // 
+    protected $listeners = [
+        'swal' => '$refresh'
+    ];
+
     #[On('Confirm-Delete')]
     public function DeleteRecord($id)
     {
