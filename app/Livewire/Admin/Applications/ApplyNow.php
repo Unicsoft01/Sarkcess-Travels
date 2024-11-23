@@ -17,10 +17,10 @@ class ApplyNow extends Component
     }
 
     #[On('Confirm-Delete')]
-    public function DeleteRecord($id = 26)
+    public function DeleteRecord($id)
     {
-        // $record = Applications::find($id);
-        // $record->delete();
+        $record = Applications::find($id);
+        $record->delete();
         $this->dispatch(
             'swal',
             [

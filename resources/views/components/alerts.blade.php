@@ -15,6 +15,7 @@
         // delete comfirm only
         $wire.on('delete-prompt', (event) => {
             const data = event
+            // console.log(data.id);
             Swal.fire({
                 title: 'Confirm Delete?',
                 text: 'You are about to Delete all records associated with this record, Action is irreversible',
@@ -26,7 +27,7 @@
                 buttonsStyling: false,
             }).then((result)=>{
                 if(result.isConfirmed){
-                    $wire.dispatch('Confirm-Delete')
+                    $wire.dispatch('Confirm-Delete', { id: data.id })
                 }
             })
         });

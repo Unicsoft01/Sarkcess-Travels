@@ -61,7 +61,8 @@
                                                             See More
                                                         </button>
 
-                                                        <button wire:click="$dispatch('delete-prompt')"
+                                                        <button
+                                                            wire:click="$dispatch('delete-prompt', {id: {{ $application->appication_id }}})"
                                                             class="btn btn-soft-danger btn-sm"
                                                             title="Delete this application with id: {{ $application->appication_id }}">
                                                             Delete

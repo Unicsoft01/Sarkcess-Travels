@@ -8,7 +8,7 @@
         <ul class="navbar-nav" id="navbar-nav">
 
             <li class="menu-title">Site</li>
-            <livewire:livewire.navlink :active="request()->routeIs('dashboard')" />
+            <livewire:livewire.navlink />
 
             <li class="menu-title">General</li>
             <li class="nav-item">
@@ -22,7 +22,7 @@
                 <div class="collapse" id="sidebarFrontend">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('admin.homepage') }}" wire:navigate  :active="request()->routeIs('admin.homepage')" >Homepage</a>
+                            <a class="sub-nav-link" href="{{ route('admin.homepage') }}" wire:navigate>Homepage</a>
                         </li>
                         <li class="sub-nav-item">
                             <a class="sub-nav-link" href="{{ route('admin.settings') }}" wire:navigate> Site Settings </a>
