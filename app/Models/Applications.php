@@ -16,7 +16,7 @@ class Applications extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'application_id';
+    protected $primaryKey = 'appication_id';
 
     /**
      * The attributes that are mass assignable.

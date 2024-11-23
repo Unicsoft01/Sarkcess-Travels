@@ -85,6 +85,28 @@
                 </div>
             </li>
 
+            {{-- submitted applications from users --}}
+
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="sidebarApplications">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:book-bookmark-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> Applications </span>
+                </a>
+                <div class="collapse" id="sidebarApplications">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('admin.apply-now') }}" wire:navigate>Study abroad Applications</a>
+                        </li>
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('admin.apply-free') }}"  wire:navigate>Enquiries and others</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
 
 
             {{-- <li class="nav-item">

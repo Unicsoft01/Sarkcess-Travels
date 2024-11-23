@@ -202,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="slide2">
+                <div class="slide2">
                     <div class="container">
                         <div class="content">
                             <h1 class="animated fadeInUp">
@@ -232,7 +232,7 @@
                                     class="icon-more-icon"></span></a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
     @endif

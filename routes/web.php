@@ -3,6 +3,8 @@
 use App\Http\Controllers\McePostsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\HtmlMinifier;
+use App\Livewire\Admin\Applications\ApplyFree;
+use App\Livewire\Admin\Applications\ApplyNow;
 use App\Livewire\Admin\BlogCreate;
 use App\Livewire\Admin\BlogIndex;
 use App\Livewire\Admin\CountryCreate;
@@ -86,6 +88,10 @@ Route::middleware([HtmlMinifier::class])->group(function () {
         Route::get('admin/universities/create', UniversityCreate::class)->name('admin.universities.create');
 
         Route::get('admin/settings', SiteSettings::class)->name('admin.settings');
+
+        // applications
+        Route::get('admin/applications/apply-now', ApplyNow::class)->name('admin.apply-now');
+        Route::get('admin/applications/apply-free', ApplyFree::class)->name('admin.apply-free');
     });
 
 

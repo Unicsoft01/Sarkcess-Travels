@@ -11,5 +11,24 @@
                 showCloseButton: false
             })
         });
+
+        // delete comfirm only
+        $wire.on('delete-prompt', (event) => {
+            const data = event
+            Swal.fire({
+                title: 'Confirm Delete?',
+                text: 'You are about to Delete all records associated with this record, Action is irreversible',
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonClass: 'btn btn-success w-sm mt-2',
+                confirmButtonClass: 'btn btn-danger w-sm mt-2',
+                confirmButtonText: 'Confirm Delete!',
+                buttonsStyling: false,
+            }).then((result)=>{
+                if(result.isConfirmed){
+                    $wire.dispatch('Confirm-Delete')
+                }
+            })
+        });
     </script>
 @endscript

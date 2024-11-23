@@ -21,7 +21,7 @@ class NewStudyApplication extends Notification implements ShouldQueue
     public function __construct($validatedData)
     {
         $this->validatedData = $validatedData;
-        $this->university = Universities::find($this->validatedData['university'])->university;
+        $this->university = Universities::find($this->validatedData['university_id'])->university;
     }
 
     /**
