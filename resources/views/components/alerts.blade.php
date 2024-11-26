@@ -25,9 +25,11 @@
                 confirmButtonClass: 'btn btn-danger w-sm mt-2',
                 confirmButtonText: 'Confirm Delete!',
                 buttonsStyling: false,
-            }).then((result)=>{
-                if(result.isConfirmed){
-                    $wire.dispatch('Confirm-Delete', { id: data.id })
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $wire.dispatch('Confirm-Delete', {
+                        id: data.id
+                    })
                 }
             })
         });

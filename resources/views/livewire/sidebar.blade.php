@@ -2,8 +2,6 @@
     <!-- Sidebar Logo -->
     <livewire:livewire.sidebar-header />
 
-
-
     <div class="scrollbar" data-simplebar>
         <ul class="navbar-nav" id="navbar-nav">
 

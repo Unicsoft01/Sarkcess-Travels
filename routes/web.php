@@ -4,7 +4,9 @@ use App\Http\Controllers\McePostsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\HtmlMinifier;
 use App\Livewire\Admin\Applications\ApplyFree;
+use App\Livewire\Admin\Applications\ApplyFreeDetails;
 use App\Livewire\Admin\Applications\ApplyNow;
+use App\Livewire\Admin\Applications\ApplyNowDetails;
 use App\Livewire\Admin\BlogCreate;
 use App\Livewire\Admin\BlogIndex;
 use App\Livewire\Admin\CountryCreate;
@@ -91,7 +93,11 @@ Route::middleware([HtmlMinifier::class])->group(function () {
 
         // applications
         Route::get('admin/applications/apply-now', ApplyNow::class)->name('admin.apply-now');
+        Route::get('applications/apply-now/{id}', ApplyNowDetails::class)->name('admin.apply-now.details');
+
         Route::get('admin/applications/apply-free', ApplyFree::class)->name('admin.apply-free');
+        Route::get('applications/apply-free/{id}', ApplyFreeDetails::class)->name('admin.apply-free.details');
+        
     });
 
 

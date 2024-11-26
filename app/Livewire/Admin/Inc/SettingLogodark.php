@@ -38,7 +38,7 @@ class SettingLogodark extends Component
             'swal',
             [
                 'title' => 'Great!',
-                'message' => 'Site settings updated successfull!',
+                'message' => 'Site Logo updated successfull!',
                 'icon' => 'success'
             ]
         );

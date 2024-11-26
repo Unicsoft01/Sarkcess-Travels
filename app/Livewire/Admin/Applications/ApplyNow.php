@@ -5,9 +5,11 @@ namespace App\Livewire\Admin\Applications;
 use App\Models\Applications;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use App\Livewire\Forms\DeleteRecords;
 
 class ApplyNow extends Component
 {
+    public DeleteRecords $deletePrompt;
 
     public $applications;
 
@@ -16,7 +18,6 @@ class ApplyNow extends Component
         $this->applications = Applications::with('university:university_id,university')->latest()->get();
     }
 
-    // 
     protected $listeners = [
         'swal' => '$refresh'
     ];
@@ -24,15 +25,11 @@ class ApplyNow extends Component
     #[On('Confirm-Delete')]
     public function DeleteRecord($id)
     {
-        $record = Applications::find($id);
-        $record->delete();
+        $this->deletePrompt->DeleteRecord('App\Models\Applications', $id);
+
         $this->dispatch(
             'swal',
-            [
-                'title' => 'Great!',
-                'message' => 'Record Deleted successfully',
-                'icon' => 'success'
-            ]
+            $this->deletePrompt->Swal()
         );
     }
 

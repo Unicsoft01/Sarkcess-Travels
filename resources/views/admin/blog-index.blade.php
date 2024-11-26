@@ -10,7 +10,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center gap-1">
                         <h4 class="card-title flex-grow-1 mb-1 anchor" id="alert-link">
                             <a href="{{ route('blog.frontend') }}" target="_blank" class="btn btn-soft-primary">
-                               Goto blog view
+                                Goto blog view
                             </a>
 
                         </h4>
@@ -55,8 +55,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex gap-2">
-                                                        <a href="#"
-                                                            target="_blank" class="btn btn-light btn-sm">
+                                                        <a href="{{ route('blog.show', ['slug'=> $post->slug]) }}" target="_blank" class="btn btn-light btn-sm">
                                                             Guest View
                                                         </a>
                                                         <button wire:navigate
@@ -64,10 +63,10 @@
                                                             class="btn btn-soft-success btn-sm">
                                                             Post Editor
                                                         </button>
-                                                        
+
                                                         <button
-                                                            wire:click="$dispatch('edit-assistance', {id: {{ $post->post_id }}})"
-                                                            wire:navigate class="btn btn-soft-danger btn-sm">
+                                                            wire:click="$dispatch('delete-prompt', {id: {{ $post->post_id }}})"
+                                                            class="btn btn-soft-danger btn-sm">
                                                             Delete Post
                                                         </button>
                                                     </div>
@@ -90,5 +89,6 @@
             </div> <!-- end col -->
         </div> <!-- end row -->
 
+        @include('components.alerts')
     </div>
 </div>

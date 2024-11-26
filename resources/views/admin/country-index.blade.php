@@ -70,8 +70,7 @@
                                                         </button>
                                                         
                                                         <button
-                                                            wire:click="$dispatch('edit-assistance', {id: {{ $country->post_id }}})"
-                                                            wire:navigate class="btn btn-soft-danger btn-sm">
+                                                        wire:click="$dispatch('delete-prompt', {id: {{ $country->country_id }}})" class="btn btn-soft-danger btn-sm">
                                                             Delete
                                                         </button>
                                                     </div>
@@ -94,5 +93,6 @@
             </div> <!-- end col -->
         </div> <!-- end row -->
 
+        @include('components.alerts')
     </div>
 </div>

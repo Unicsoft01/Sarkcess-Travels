@@ -10,7 +10,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center gap-1">
                         <h4 class="card-title flex-grow-1 mb-1 anchor" id="alert-link">
                             <a href="{{ route('courses.index') }}" target="_blank" class="btn btn-soft-primary">
-                               Users view
+                                Users view
                             </a>
                         </h4>
 
@@ -23,7 +23,7 @@
                             <div class="table-responsive">
                                 <table class="table align-middle mb-0 table-hover table-centered">
                                     <thead class="bg-light-subtle">
-                                        
+
                                         <tr>
                                             <th style="width: 20px;">
                                                 <div class="form-check">
@@ -50,7 +50,7 @@
                                                     {{ Str::of($university->university)->headline() }}
                                                 </td>
                                                 <td>
-                                                    
+
                                                     {{ Str::of($university->countryLocated->country)->headline() }}
                                                 </td>
                                                 <td>
@@ -58,7 +58,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex gap-2">
-                                                        <a href="{{ route('universities.show', ['slug'=> $university->slug]) }}"
+                                                        <a href="{{ route('universities.show', ['slug' => $university->slug]) }}"
                                                             target="_blank" class="btn btn-light btn-sm">
                                                             Guest View
                                                         </a>
@@ -67,10 +67,10 @@
                                                             class="btn btn-soft-success btn-sm">
                                                             Edit
                                                         </button>
-                                                        
+
                                                         <button
-                                                            wire:click="$dispatch('edit-assistance', {id: {{ $university->post_id }}})"
-                                                            wire:navigate class="btn btn-soft-danger btn-sm">
+                                                            wire:click="$dispatch('delete-prompt', {id: {{ $university->university_id }}})"
+                                                            class="btn btn-soft-danger btn-sm">
                                                             Delete
                                                         </button>
                                                     </div>
@@ -93,5 +93,6 @@
             </div> <!-- end col -->
         </div> <!-- end row -->
 
+        @include('components.alerts')
     </div>
 </div>

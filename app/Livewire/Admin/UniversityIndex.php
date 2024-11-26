@@ -4,10 +4,13 @@ namespace App\Livewire\Admin;
 
 use App\Models\Universities;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Livewire\Attributes\On;
 use Livewire\Component;
+use App\Livewire\Forms\DeleteRecords;
 
 class UniversityIndex extends Component
 {
+    Public DeleteRecords $deletePrompt;
 
     public $universities;
     
@@ -19,10 +22,19 @@ class UniversityIndex extends Component
     {
         return view('admin.university-index');
     }
-}
 
-// return view('admin.university-index',
-// [
-//     'universities' => Universities::with(['countryLocated' => fn ($countries) => $countries->chaperone()])->get(),
-// ]
-// );
+    protected $listeners = [
+        'swal' => '$refresh'
+    ];
+
+    #[On('Confirm-Delete')]
+    public function DeleteRecord($id)
+    {
+        $this->deletePrompt->DeleteRecord('App\Models\Universities', $id);
+
+        $this->dispatch(
+            'swal',
+            $this->deletePrompt->Swal()
+      );
+    }
+}

@@ -42,6 +42,10 @@ class ApplyNow extends Component
         $this->university_id = $id;
     }
 
+    protected $listeners = [
+        'swal' => '$refresh'
+    ];
+
     public function create()
     {
         $validatedData = $this->validate();

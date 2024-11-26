@@ -106,6 +106,10 @@ class ApplyFreeAdvice extends Component
             ->send(new CopyOfMail($data));
     }
 
+    protected $listeners = [
+        'swal' => '$refresh'
+    ];
+
     // public function placeholder(array $params = [])
     // {
     //     return view('frontend.placeholders.how-to-study-placeholder', $params);

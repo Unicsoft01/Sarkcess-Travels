@@ -67,6 +67,11 @@
                                     {{ $message }}
                                 </div>
                             @enderror
+                            @error('slug')
+                                <div id="slug" class="text-danger mt-1">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
 
                         {{-- body --}}

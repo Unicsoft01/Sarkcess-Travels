@@ -56,7 +56,7 @@
                                                 <td>
                                                     <div class="d-flex gap-2">
                                                         <button wire:navigate
-                                                            wire:click="OpenPostEditor({{ $application->country_id }})"
+                                                            href="{{ route('admin.apply-now.details', ['id' => $application->appication_id]) }}"
                                                             class="btn btn-soft-success btn-sm">
                                                             See More
                                                         </button>
