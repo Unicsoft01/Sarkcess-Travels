@@ -3,7 +3,6 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Universities;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use App\Livewire\Forms\DeleteRecords;

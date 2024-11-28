@@ -15,7 +15,7 @@
 
                         </h4>
 
-                        <a href="{{ route('admin.blog-post.create') }}" wire:navigate class="btn btn-sm btn-success">
+                        <a href="{{ route('admin.blog-post.create') }}" class="btn btn-sm btn-success">
                             Create new Post
                         </a>
                     </div>
