@@ -2,13 +2,16 @@
 
 namespace App\Livewire\Components;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class LogOut extends Component
 {
     public function logout(Logout $logout): void
     {
-        $logout();
+        // $logout();
+        Auth::logout();
+
 
         $this->redirect('/login', navigate: true);
     }
