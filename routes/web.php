@@ -11,6 +11,8 @@ use App\Livewire\Admin\BlogCreate;
 use App\Livewire\Admin\BlogIndex;
 use App\Livewire\Admin\CountryCreate;
 use App\Livewire\Admin\CountryIndex;
+use App\Livewire\Admin\Faq\CreateOrUpdate;
+use App\Livewire\Admin\Faq\Index;
 use App\Livewire\Admin\HomeIndex;
 use App\Livewire\Admin\Inc\AdAssistanceCreate;
 use App\Livewire\Admin\Inc\EditAppAssistance;
@@ -97,6 +99,9 @@ Route::middleware([HtmlMinifier::class])->group(function () {
 
         Route::get('admin/applications/apply-free', ApplyFree::class)->name('admin.apply-free');
         Route::get('applications/apply-free/{id}', ApplyFreeDetails::class)->name('admin.apply-free.details');
+        
+        Route::get('admin/faqs', Index::class)->name('admin.faq');
+        Route::get('admin/faq/create', CreateOrUpdate::class)->name('admin.faq.create');
         
     });
 

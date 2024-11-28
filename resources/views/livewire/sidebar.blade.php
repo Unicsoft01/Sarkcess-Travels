@@ -26,14 +26,14 @@
                             <a class="sub-nav-link" href="{{ route('admin.settings') }}" wire:navigate> Site Settings </a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="#">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.faq') }}" wire:navigate> FAQs </a>
                         </li>
-                        <li class="sub-nav-item">
+                        {{-- <li class="sub-nav-item">
                             <a class="sub-nav-link" href="#">Edit</a>
                         </li>
                         <li class="sub-nav-item">
                             <a class="sub-nav-link" href="#">Create</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </li>

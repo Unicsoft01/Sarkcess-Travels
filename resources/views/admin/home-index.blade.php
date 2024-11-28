@@ -15,7 +15,7 @@
 
                 <livewire:admin.inc.admin-app-assistance />
 
-                <div class="card">
+                {{-- <div class="card">
                     <div class="card-body">
                         <h5 class="card-title mb-1 anchor" id="alert-icon">
                             Icons Alert Example <a class="anchor-link" href="#alert-icon">#</a>
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </div> <!-- end card body -->
-                </div> <!-- end card -->
+                </div> <!-- end card --> --}}
             </div> <!-- end col -->
 
             <div class="col-xl-3">
@@ -212,12 +212,12 @@
                         <li class="nav-item">
                             <a href="#alert-link" class="nav-link">Application Assistance</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="#alert-icon" class="nav-link">Icons Alert</a>
                         </li>
                         <li class="nav-item">
                             <a href="#alert-additional" class="nav-link">Additional Content Alert</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>

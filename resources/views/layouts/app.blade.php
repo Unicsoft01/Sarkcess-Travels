@@ -382,7 +382,7 @@
                         <div class="col-12 text-center">
                             {{ date('Y') }} &copy; {{ config('app.name') }}. Crafted by <iconify-icon
                                 icon="iconamoon:heart-duotone" class="fs-18 align-middle text-danger"></iconify-icon>
-                            <a href="#" class="fw-bold footer-text" target="_blank">Unicsoft Tech.</a>
+                            <a href="#" class="fw-bold footer-text" target="_blank">TakeOff Consulting.</a>
                         </div>
                     </div>
                 </div>
