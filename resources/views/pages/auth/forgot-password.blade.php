@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Password;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('layouts.guest')] class extends Component
-{
+new #[Layout('layouts.guest')] class extends Component {
     public string $email = '';
 
     /**
@@ -20,9 +19,7 @@ new #[Layout('layouts.guest')] class extends Component
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
-        $status = Password::sendResetLink(
-            $this->only('email')
-        );
+        $status = Password::sendResetLink($this->only('email'));
 
         if ($status != Password::RESET_LINK_SENT) {
             $this->addError('email', __($status));
@@ -32,7 +29,15 @@ new #[Layout('layouts.guest')] class extends Component
 
         $this->reset('email');
 
-        session()->flash('status', __($status));
+        // session()->flash('status', __($status));
+        $this->dispatch(
+            'swal',
+            [
+                'title' => 'Great!',
+                'message' =>  __($status),
+                'icon' => 'success'
+            ]
+        );
     }
 }; ?>
 
@@ -44,18 +49,37 @@ new #[Layout('layouts.guest')] class extends Component
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form wire:submit="sendPasswordResetLink">
+    <form wire:submit="sendPasswordResetLink" novalidate>
+        <div class="mb-3">
+            <x-forms.text-input name="email" id="email" label="Email" wire:model.blur="email" type="email"
+                placeholder="Enter your email" required autofocus autocomplete="email" />
+
+            @error('email')
+                <div id="email" class="text-danger mt-1">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <div class="mb-1 text-centerw d-grids">
+            <button class="btn btn-soft-success" type="submit">
+                <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"
+                    wire:loading></span>
+                {{ __('Email Password Reset Link') }}
+            </button>
+        </div>
         <!-- Email Address -->
-        <div>
+        {{-- <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input wire:model="email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        </div> --}}
 
-        <div class="flex items-center justify-end mt-4">
+        {{-- <div class="flex items-center justify-end mt-4">
             <x-primary-button>
                 {{ __('Email Password Reset Link') }}
             </x-primary-button>
-        </div>
+        </div> --}}
     </form>
 </div>
+@include('components.alerts')

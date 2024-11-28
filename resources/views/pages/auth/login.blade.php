@@ -49,7 +49,7 @@ new #[Layout('layouts.guest')] class extends Component
             </div>
             {{-- password --}}
             <div class="mb-3">
-                <a href="#" class="float-end text-muted text-unline-dashed ms-1">Forgot Password?</a>
+                <a href="{{ route('password.request') }}" class="float-end text-muted text-unline-dashed ms-1">Forgot Password?</a>
                 <x-forms.text-input name="form.password" label="Password" wire:model.blur="form.password" type="password"
                     placeholder="Enter your password" required autocomplete="current-password" />
 
