@@ -34,7 +34,8 @@ class McePostsController extends Controller
             'post_title' => 'required',
             // 'slug' => 'required|unique:blogs',
             // 'post' => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            // 'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'thumbnail' => 'required|max:2048',
         ]);
 
         $imageName = time() . '.' . $request->thumbnail->extension();
